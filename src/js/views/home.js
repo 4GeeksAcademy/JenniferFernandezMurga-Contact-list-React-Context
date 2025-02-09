@@ -19,8 +19,8 @@ export const Home = () => {
 	return(
 		<div>
 			<div className="vista">
-			<Link to="/add-contact">
-    		<button className="btn btn-primary">Agregar contacto</button>
+			<Link to="/add-contact" 
+    		className="btn btn-primary">Agregar contacto
 			</Link>
 			</div>
 			

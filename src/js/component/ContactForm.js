@@ -2,6 +2,7 @@
 import React, { useContext, useState,useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import { Context } from "../store/appContext";
+import { Modal } from "./Modal";
 
 export const ContactForm = ({ pathname }) => {
   const { actions, getStore } = useContext(Context);
