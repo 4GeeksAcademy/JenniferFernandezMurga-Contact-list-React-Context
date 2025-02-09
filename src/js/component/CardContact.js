@@ -22,17 +22,25 @@ export const CardContact = ({ id, address, phone, email, name }) => {
   };
 
   return (
-    <div className="container m-2">
-      <div className="d-flex justify-content-between ">
-        {/* <img src="https://img.freepik.com/fotos-premium/retrato-de-homem-de-negocios-e-expressao-facial-seria-com-fundo-de-estudio-para-espaco-de-copia-com-flare-pessoa-corporativa-com-foco-de-pensamento-e-duvida-facial-procura-dilema-ou-concentracao_590464-84924.jpg" className="rounded"/> */}
-        <div className="Info p-3">
-          <h5 className="card-name">Name: {name}</h5>
-          <p className="card-email">Email: {email}</p>
-          <p className="card-phone">Phone: {phone}</p>
-          <p className="card-address">Address: {address}</p>
+
+    <div className="card mb-3" style={{maxWidth:"80%"}}>
+
+      <div className="row g-0 d-flex justify-content_between">
+
+        <div className="col-md-4">
+          <img src="https://dexterseries.ru/wp-content/uploads/2020/05/240px-dextermorgan.jpg" className="img-fluid rounded-start" alt="..."/>
         </div>
 
-        <div className="boton-link m-3">
+        <div className="col-md-6">
+          <div className="card-body">
+            <h5 className="card-name">Name: {name}</h5>
+            <p className="card-email">Email: {email}</p>
+            <p className="card-phone">Phone: {phone}</p>
+            <p className="card-address">Address: {address}</p>
+        </div>
+      </div>
+
+      <div className="row col-2 boton-link m-3">
           <Link to={`/edit-contact/${id}`} className="btn btn-success">
             <CiEdit />
           </Link>
@@ -41,7 +49,6 @@ export const CardContact = ({ id, address, phone, email, name }) => {
             <MdDeleteForever />
           </button>
         </div>
-      </div>
 
       <Modal abrirModal={abrirModal} cerrarModal={() => cambiarModal(false)}>
         <div>
@@ -54,6 +61,7 @@ export const CardContact = ({ id, address, phone, email, name }) => {
           </button>
         </div>
       </Modal>
+    </div>
     </div>
   );
 };
