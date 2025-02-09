@@ -1,0 +1,11 @@
+.container{
+    border: 1px solid grey;
+}
+/* .info{
+    justify-content: center;
+   flex-direction: column;
+   align-items: center;
+} */
+ button{
+    justify-content: flex-end;
+ }
