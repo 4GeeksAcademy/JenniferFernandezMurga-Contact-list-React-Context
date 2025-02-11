@@ -85,7 +85,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			editContact: async (id, contact) => {
 				const store = getStore();
 				try {
-					const response = await fetch(`https://playground.4geeks.com/contact/agendas/4geeks-user/contacts/${id}`, {
+					const response = await fetch(`https://playground.4geeks.com/contact/agendas/JenniferF/contacts/${id}`, {
 						method: "PUT",
 						headers: {
 							'Content-Type': 'application/json'
@@ -113,31 +113,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			}
 			
-
-			// editContact: async (id, updatedContact) => {
-			// 	const myHeaders = new Headers();
-			// 	myHeaders.append("Content-Type", "application/json");
-			
-			// 	const raw = JSON.stringify(updatedContact);
-			
-			// 	const requestOptions = {
-			// 		method: "PUT",
-			// 		headers: myHeaders,
-			// 		body: raw
-			// 	};
-			
-			// 	try {
-			// 		const response = await fetch(`https://playground.4geeks.com/contact/agendas/JenniferF/contacts/${id}`, requestOptions);
-			// 		if (!response.ok) {
-			// 			throw new Error(`Error al editar contacto: ${response.statusText}`);
-			// 		}
-			// 		const result = await response.json();
-			// 		console.log(result);
-			// 		await getActions().getContactList();
-			// 	} catch (error) {
-			// 		console.error(error);
-			// 	}
-			// }
 		
 		,
 		removeContact: async (id) => {
@@ -162,32 +137,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		}
 		
 		
-		,
-		
-		  
 	
-	
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
 		}
-	};
+
+	}
 };
 
 export default getState;

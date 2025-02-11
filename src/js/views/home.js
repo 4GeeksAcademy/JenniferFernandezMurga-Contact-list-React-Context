@@ -20,7 +20,7 @@ export const Home = () => {
 		<div>
 			<div className="vista">
 			<Link to="/add-contact" 
-    		className="btn btn-primary">Agregar contacto
+    		className="agregar btn btn-success ms-5 mt-2">Add Contact
 			</Link>
 			</div>
 			
